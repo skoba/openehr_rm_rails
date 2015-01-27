@@ -1,22 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe DataValue, :type => :model do
-  describe "text value" do
+RSpec.describe DataValue, type: :model do
+  describe 'text value' do
     let(:dv_text) { build :dv_text }
-    subject {dv_text}
+    subject { dv_text }
 
-    it {is_expected.to be_valid}
+    it { is_expected.to be_valid }
 
     it 'text_value should be assigned properly' do
       expect(dv_text.txt_value).to eq 'Test DvText'
     end
 
     it 'value should be aliases to txt_value' do
-    	  expect(dv_text.value).to eq 'Test DvText'
+      expect(dv_text.value).to eq 'Test DvText'
     end
   end
 
-  describe "amount value" do
+  describe 'amount value' do
     let(:dv_amount) { build :dv_amount }
     subject { dv_amount }
 

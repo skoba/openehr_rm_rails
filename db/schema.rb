@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120132238) do
+ActiveRecord::Schema.define(version: 20150127150315) do
 
-  create_table "compositions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'compositions', force: :cascade do |t|
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
   create_table "content_item_proxies", force: :cascade do |t|
@@ -60,5 +60,14 @@ ActiveRecord::Schema.define(version: 20150120132238) do
 
   add_index "items", ["entry_id"], name: "index_items_on_entry_id"
   add_index "items", ["item_proxy_id"], name: "index_items_on_item_proxy_id"
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "archetypeid"
+    t.string   "path"
+    t.string   "name"
+    t.string   "uid"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
 end

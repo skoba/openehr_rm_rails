@@ -72,3 +72,6 @@ gem 'database_cleaner', group: :test
 gem 'launchy', group: :test
 gem 'unicorn'
 gem 'rails_12factor', group: :production
+gem 'rubocop', group: [:development, :test]
+gem 'guard-rubocop', group: [:development, :test]
+

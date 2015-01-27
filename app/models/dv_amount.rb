@@ -1,4 +1,5 @@
+# Value class related to amouts
 class DvAmount < DataValue
-  alias value amount_value
-  alias value= amount_value=
+  alias_method :value, :amount_value
+  alias_method :value=, :amount_value=
 end

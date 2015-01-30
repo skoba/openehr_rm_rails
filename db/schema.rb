@@ -11,12 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150127150315) do
+ActiveRecord::Schema.define(version: 20150130132753) do
 
-  create_table 'compositions', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "compositions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "purpose"
+    t.date     "start_date"
+    t.string   "end_date"
+    t.integer  "party_id"
+    t.string   "party_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "contacts", ["party_type", "party_id"], name: "index_contacts_on_party_type_and_party_id"
 
   create_table "content_item_proxies", force: :cascade do |t|
     t.integer  "section_id"

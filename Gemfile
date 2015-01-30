@@ -73,5 +73,5 @@ gem 'launchy', group: :test
 gem 'unicorn'
 gem 'rails_12factor', group: :production
 gem 'rubocop', group: [:development, :test]
-gem 'guard-rubocop', group: [:development, :test]
-
+gem 'guard-rubocop', group: :development
+gem 'guard-livereload', group: :development
